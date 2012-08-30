@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Class Phalcon_Model_Manager &mdash; Phalcon 0.4.4 documentation</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/configurationblock.css" type="text/css" />
+    <!--
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/layout.css" type="text/css" />
+    -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Rosario" type="text/css">
+    <!-- link rel="stylesheet" href="http://phalconphp.com/css/s.css" type="text/css" -->
+    <link rel="stylesheet" href="../_static/s.css" type="text/css">    
+    <link rel="stylesheet" href="../_static/docs.css" type="text/css">
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.4.4',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+
+    <!--<script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/configurationblock.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/configurationblock.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/configurationblock.js"></script>-->
+
+    <script type="text/javascript">
+    <!--
+        $(document).ready(function() {
+            $("#versions").change(function() {
+                var docsUrl = $(this).val();
+                window.location.href = docsUrl;
+            });
+        });
+    -->
+    </script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="Phalcon 0.4.4 documentation" href="../index.html" />
+    <link rel="up" title="API Index" href="index.html" />
+    <link rel="next" title="Class Phalcon_Model_Message" href="Phalcon_Model_Message.html" />
+    <link rel="prev" title="Class Phalcon_Model_Exception" href="Phalcon_Model_Exception.html" /> 
+  </head>
+  <body>
+    <div id="wrapper">
+
+      <div id="header">        
+        <h1><a href="http://phalconphp.com/index" ><img border="0" src="../_static/img/logo-small.png"></a></h1>
+        <div align="center">
+          <div id="nav-main" role="navigation">
+            <div class="menubar">
+              <div class="nav-main-features nav-first"><a href="http://phalconphp.com/index" >HOME</a></div>
+              <div class="nav-main-features nav-first"><a href="http://phalconphp.com/download" >DOWNLOAD</a></div>
+              <div class="nav-main-features"><a href="http://docs.phalconphp.com" >DOCUMENTATION</a></div>
+              <div class="nav-main-features"><a href="https://groups.google.com/forum/#!forum/phalcon">SUPPORT</a></div>
+              <div class="nav-main-features nav-first"><a href="https://github.com/phalcon/cphalcon">GITHUB</a></div>
+              <div class="nav-main-features"><a target="blog" href="http://blog.phalconphp.com/">BLOG</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="related">      
+      <ul>
+        <li class="right" >
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="Phalcon_Model_Message.html" title="Class Phalcon_Model_Message"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="Phalcon_Model_Exception.html" title="Class Phalcon_Model_Exception"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://www.phalconphp.com">Home</a> &raquo;</li>
+        <li><a href="../index.html">Phalcon 0.4.4 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">API Index</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+      <table width="90%" align="center">
+        <tr>
+      <td class="primary-box" width="25%" valign="top">
+            
+            <div id="searchbox" style="">
+              <h3>Search</h3>
+                <form class="search" action="http://readthedocs.org/search/project/" method="get">
+                  <input type="text" name="q" size="18">
+                  <input type="submit" value="Go">
+                  <input type="hidden" name="selected_facets" value="project:">
+                </form>
+            </div>
+            <h3><a href="../index.html">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference internal" href="#">Class <strong>Phalcon_Model_Manager</strong></a><ul>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+</ul>
+</li>
+</ul>
+
+            <h4>Previous topic</h4>
+            <p class="topless"><a href="Phalcon_Model_Exception.html"
+                                  title="previous chapter">Class <strong>Phalcon_Model_Exception</strong></a></p>
+            <h4>Next topic</h4>
+            <p class="topless"><a href="Phalcon_Model_Message.html"
+                                  title="next chapter">Class <strong>Phalcon_Model_Message</strong></a></p>
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="../_sources/api/Phalcon_Model_Manager.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+        </td>
+          <td class="second-box" valign="top">  
+            <div class="document">
+                <div class="documentwrapper">
+                  <div class="bodywrapper">
+                <div class="body" >
+                      
+  <div class="section" id="class-phalcon-model-manager">
+<h1>Class <strong>Phalcon_Model_Manager</strong><a class="headerlink" href="#class-phalcon-model-manager" title="Permalink to this headline">¶</a></h1>
+<p>Manages the creation of models into applications and their relationships. Phacon_Model_Manager helps to control the creation of models across a request execution.</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+
+<span class="nv">$manager</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Phalcon_Model_Manager</span><span class="p">();</span>
+<span class="nv">$manager</span><span class="o">-&gt;</span><span class="na">setModelsDir</span><span class="p">(</span><span class="s1">&#39;../apps/models/&#39;</span><span class="p">);</span>
+<span class="nv">$robot</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Robots</span><span class="p">(</span><span class="nv">$manager</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<p><strong>__construct</strong> (Phalcon_Config|stdClass $options)</p>
+<p>Constructor for Phalcon_Model_Manager</p>
+<p><strong>setBasePath</strong> (string $basePath)</p>
+<p>Sets base path. Depending of your platform, always add a trailing slash or backslash</p>
+<p><strong>setMetaData</strong> (object $metadata)</p>
+<p>Overwrites default meta-data manager</p>
+<p><strong>Phalcon_Model_Metadata</strong> <strong>getMetaData</strong> ()</p>
+<p>Returns active meta-data manager. If not exist then one will be created</p>
+<p><strong>setCache</strong> (Phalcon_Cache_Backend|object $cache)</p>
+<p>Set the cache object or cache parameters to make the view caching</p>
+<p><strong>Phalcon_Cache_Backend</strong> <strong>getCache</strong> ()</p>
+<p>Returns the default cache backend. This cache will be used to store resultsets and generated SQL</p>
+<p><strong>setModelsDir</strong> (string $modelsDir)</p>
+<p>Sets the models directory. Depending of your platform, always add a trailing slash or backslash</p>
+<p><strong>string</strong> <strong>getModelsDir</strong> ()</p>
+<p>Gets active models directory</p>
+<p><strong>boolean</strong> <strong>isModel</strong> (string $modelName)</p>
+<p>Checks whether the given name is an existing model</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+
+<span class="c1">// Is there a &quot;Robots&quot; model?</span>
+<span class="nv">$isModel</span> <span class="o">=</span> <span class="nv">$manager</span><span class="o">-&gt;</span><span class="na">isModel</span><span class="p">(</span><span class="s1">&#39;Robots&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>boolean</strong> <strong>load</strong> (string $modelName)</p>
+<p>Loads a model looking for its file and initializing them</p>
+<p><strong>boolean</strong> <strong>getModel</strong> (string $modelName)</p>
+<p>Gets/Instantiates model from directory</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+
+<span class="c1">// Get the &quot;Robots&quot; model</span>
+<span class="nv">$Robots</span> <span class="o">=</span> <span class="nv">$manager</span><span class="o">-&gt;</span><span class="na">getModel</span><span class="p">(</span><span class="s1">&#39;Robots&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>initialize</strong> (Phalcon_Model_Base $model)</p>
+<p>Initializes a model in the model manager</p>
+<p><strong>boolean</strong> <strong>getSource</strong> (string $modelName)</p>
+<p>Gets the possible source model name from its class name</p>
+<p><strong>setConnection</strong> (Phalcon_Db $connection)</p>
+<p>Sets the main connection that automatically is binded to all created models</p>
+<p><strong>Phalcon_Db</strong> <strong>getConnection</strong> ()</p>
+<p>Gets default connection to the database. All models by default will use connection returned by this method</p>
+<p><strong>setAutoConnection</strong> (boolean $autoConnection)</p>
+<p>Sets if the models manager should create a default connection automatically and bind it to the created models</p>
+<p><strong>boolean</strong> <strong>haveAutoConnection</strong> ()</p>
+<p>Check whether the manager binds a database connection automatically to the created models</p>
+<p><strong>addHasOne</strong> (Phalcon_Model_Base $model, mixed $fields, string $referenceModel, mixed $referencedFields, array $options)</p>
+<p>Setup a 1-1 relation between two models</p>
+<p><strong>addBelongsTo</strong> (Phalcon_Model_Base $model, mixed $fields, string $referenceModel, mixed $referencedFields, array $options)</p>
+<p>Setup a relation reverse 1-1  between two models</p>
+<p><strong>addHasMany</strong> (Phalcon_Model_Base $model, mixed $fields, string $referenceModel, mixed $referencedFields, array $options)</p>
+<p>Setup a relation 1-n between two models</p>
+<p><strong>boolean</strong> <strong>existsBelongsTo</strong> (string $modelName, string $modelRelation)</p>
+<p>Checks whether a model has a belongsTo relation with another model</p>
+<p><strong>boolean</strong> <strong>existsHasMany</strong> (string $modelName, string $modelRelation)</p>
+<p>Checks whether a model has a hasMany relation with another model</p>
+<p><strong>boolean</strong> <strong>existsHasOne</strong> (string $modelName, string $modelRelation)</p>
+<p>Checks whether a model has a hasOne relation with another model</p>
+<p><strong>_getRelationRecords</strong> (array $relation, string $method, Phalcon_Model_Base $record)</p>
+<p>Helper method to query records based on a relation definition</p>
+<p><strong>Phalcon_Model_Resultset</strong> <strong>getBelongsToRecords</strong> (string $method, string $modelName, string $modelRelation, Phalcon_Model_Base $record)</p>
+<p>Gets belongsTo related records from a model</p>
+<p><strong>Phalcon_Model_Resultset</strong> <strong>getHasManyRecords</strong> (string $method, string $modelName, string $modelRelation, Phalcon_Model_Base $record)</p>
+<p>Gets hasMany related records from a model</p>
+<p><strong>Phalcon_Model_Resultset</strong> <strong>getHasOneRecords</strong> (string $method, string $modelName, string $modelRelation, Phalcon_Model_Base $record)</p>
+<p>Gets belongsTo related records from a model</p>
+<p><strong>array</strong> <strong>getBelongsTo</strong> (Phalcon_Model_Base $model)</p>
+<p>Gets belongsTo relations defined on a model</p>
+<p><strong>array</strong> <strong>getHasMany</strong> (Phalcon_Model_Base $model)</p>
+<p>Gets hasMany relations defined on a model</p>
+<p><strong>array</strong> <strong>getHasOne</strong> (Phalcon_Model_Base $model)</p>
+<p>Gets hasOne relations defined on a model</p>
+<p><strong>array</strong> <strong>getHasOneAndHasMany</strong> (Phalcon_Model_Base $model)</p>
+<p>Gets hasOne relations defined on a model</p>
+<p><strong>string</strong> <strong>getCompleteModelsPath</strong> ()</p>
+<p>Returns the complete on which manager is looking for models</p>
+<p><strong>autoload</strong> (string $className)</p>
+<p>Autoload function for model lazy loading</p>
+<p><strong>Phalcon_Model_Manager</strong> <strong>getDefault</strong> ()</p>
+<p>Get the default Phalcon_Model_Manager (usually this first instantiated)</p>
+<p><strong>reset</strong> ()</p>
+<p>Resets internal default manager</p>
+</div>
+</div>
+
+
+                    </div>
+                  </div>
+                </div>          
+            </div>
+          </td>  
+        </tr>   
+      </table>
+    <div class="related">      
+      <ul>
+        <li class="right" >
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="Phalcon_Model_Message.html" title="Class Phalcon_Model_Message"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="Phalcon_Model_Exception.html" title="Class Phalcon_Model_Exception"
+             >previous</a> |</li>
+          <li><a href="index.html" >API Index</a> &raquo;</li> 
+      </ul>
+    </div>
+        <div id="footer">
+             &copy; Copyright 2012, Phalcon Team.
+             Last updated on Aug 30, 2012.
+            Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+        </div>
+
+    </div>
+
+  </body>
+</html>

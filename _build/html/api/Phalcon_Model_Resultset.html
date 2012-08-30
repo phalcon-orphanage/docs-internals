@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Class Phalcon_Model_Resultset &mdash; Phalcon 0.4.4 documentation</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/configurationblock.css" type="text/css" />
+    <!--
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/layout.css" type="text/css" />
+    -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Rosario" type="text/css">
+    <!-- link rel="stylesheet" href="http://phalconphp.com/css/s.css" type="text/css" -->
+    <link rel="stylesheet" href="../_static/s.css" type="text/css">    
+    <link rel="stylesheet" href="../_static/docs.css" type="text/css">
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.4.4',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+
+    <!--<script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/configurationblock.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/configurationblock.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/configurationblock.js"></script>-->
+
+    <script type="text/javascript">
+    <!--
+        $(document).ready(function() {
+            $("#versions").change(function() {
+                var docsUrl = $(this).val();
+                window.location.href = docsUrl;
+            });
+        });
+    -->
+    </script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="Phalcon 0.4.4 documentation" href="../index.html" />
+    <link rel="up" title="API Index" href="index.html" />
+    <link rel="next" title="Class Phalcon_Model_Row" href="Phalcon_Model_Row.html" />
+    <link rel="prev" title="Class Phalcon_Model_Query" href="Phalcon_Model_Query.html" /> 
+  </head>
+  <body>
+    <div id="wrapper">
+
+      <div id="header">        
+        <h1><a href="http://phalconphp.com/index" ><img border="0" src="../_static/img/logo-small.png"></a></h1>
+        <div align="center">
+          <div id="nav-main" role="navigation">
+            <div class="menubar">
+              <div class="nav-main-features nav-first"><a href="http://phalconphp.com/index" >HOME</a></div>
+              <div class="nav-main-features nav-first"><a href="http://phalconphp.com/download" >DOWNLOAD</a></div>
+              <div class="nav-main-features"><a href="http://docs.phalconphp.com" >DOCUMENTATION</a></div>
+              <div class="nav-main-features"><a href="https://groups.google.com/forum/#!forum/phalcon">SUPPORT</a></div>
+              <div class="nav-main-features nav-first"><a href="https://github.com/phalcon/cphalcon">GITHUB</a></div>
+              <div class="nav-main-features"><a target="blog" href="http://blog.phalconphp.com/">BLOG</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="related">      
+      <ul>
+        <li class="right" >
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="Phalcon_Model_Row.html" title="Class Phalcon_Model_Row"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="Phalcon_Model_Query.html" title="Class Phalcon_Model_Query"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://www.phalconphp.com">Home</a> &raquo;</li>
+        <li><a href="../index.html">Phalcon 0.4.4 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">API Index</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+      <table width="90%" align="center">
+        <tr>
+      <td class="primary-box" width="25%" valign="top">
+            
+            <div id="searchbox" style="">
+              <h3>Search</h3>
+                <form class="search" action="http://readthedocs.org/search/project/" method="get">
+                  <input type="text" name="q" size="18">
+                  <input type="submit" value="Go">
+                  <input type="hidden" name="selected_facets" value="project:">
+                </form>
+            </div>
+            <h3><a href="../index.html">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference internal" href="#">Class <strong>Phalcon_Model_Resultset</strong></a><ul>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+</ul>
+</li>
+</ul>
+
+            <h4>Previous topic</h4>
+            <p class="topless"><a href="Phalcon_Model_Query.html"
+                                  title="previous chapter">Class <strong>Phalcon_Model_Query</strong></a></p>
+            <h4>Next topic</h4>
+            <p class="topless"><a href="Phalcon_Model_Row.html"
+                                  title="next chapter">Class <strong>Phalcon_Model_Row</strong></a></p>
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="../_sources/api/Phalcon_Model_Resultset.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+        </td>
+          <td class="second-box" valign="top">  
+            <div class="document">
+                <div class="documentwrapper">
+                  <div class="bodywrapper">
+                <div class="body" >
+                      
+  <div class="section" id="class-phalcon-model-resultset">
+<h1>Class <strong>Phalcon_Model_Resultset</strong><a class="headerlink" href="#class-phalcon-model-resultset" title="Permalink to this headline">¶</a></h1>
+<p><em>implements</em> Iterator, Traversable, SeekableIterator, Countable, ArrayAccess, Serializable</p>
+<p>This component allows to Phalcon_Model_Base returns large resulsets with the minimum memory consumption  Resulsets can be traversed using a standard foreach or a while statement. If a resultset is serialized  it will dump all the rows into a big array. Then unserialize will retrieve the rows as they were before serializing.</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+
+<span class="c1">// Using a standard foreach</span>
+<span class="nv">$robots</span> <span class="o">=</span> <span class="nv">$Robots</span><span class="o">-&gt;</span><span class="na">find</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s2">&quot;type=&#39;virtual&#39;&quot;</span><span class="p">,</span> <span class="s2">&quot;order&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;name&quot;</span><span class="p">));</span>
+<span class="k">foreach</span> <span class="p">(</span><span class="nv">$robots</span> <span class="k">as</span> <span class="nv">$robot</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="nv">$robot</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Using a while</span>
+<span class="nv">$robots</span> <span class="o">=</span> <span class="nv">$Robots</span><span class="o">-&gt;</span><span class="na">find</span><span class="p">(</span><span class="k">array</span><span class="p">(</span><span class="s2">&quot;type=&#39;virtual&#39;&quot;</span><span class="p">,</span> <span class="s2">&quot;order&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;name&quot;</span><span class="p">));</span>
+<span class="nv">$robots</span><span class="o">-&gt;</span><span class="na">rewind</span><span class="p">();</span>
+<span class="k">while</span> <span class="p">(</span><span class="nv">$robots</span><span class="o">-&gt;</span><span class="na">valid</span><span class="p">())</span> <span class="p">{</span>
+    <span class="nv">$robot</span> <span class="o">=</span> <span class="nv">$robots</span><span class="o">-&gt;</span><span class="na">current</span><span class="p">();</span>
+    <span class="k">echo</span> <span class="nv">$robot</span><span class="o">-&gt;</span><span class="na">name</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+    <span class="nv">$robots</span><span class="o">-&gt;</span><span class="na">next</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<p><strong>__construct</strong> (Phalcon_Model_Base $model, Phalcon_Model_Result $result, Phalcon_Model_Cache $cache)</p>
+<p>Phalcon_Model_Resultset constructor</p>
+<p><strong>boolean</strong> <strong>valid</strong> ()</p>
+<p>Check whether internal resource has rows to fetch</p>
+<p><strong>Phalcon_Model_Base</strong> <strong>current</strong> ()</p>
+<p>Returns current row in the resultset</p>
+<p><strong>next</strong> ()</p>
+<p>Moves cursor to next row in the resultset</p>
+<p><strong>key</strong> ()</p>
+<p>Gets pointer number of active row in the resultset</p>
+<p><strong>rewind</strong> ()</p>
+<p>Rewinds resultset to its beginning</p>
+<p><strong>seek</strong> (int $position)</p>
+<p>Changes internal pointer to a specific position in the resultset</p>
+<p><strong>int</strong> <strong>count</strong> ()</p>
+<p>Counts how many rows are in the resultset</p>
+<p><strong>boolean</strong> <strong>offsetExists</strong> (int $index)</p>
+<p>Checks whether offset exists in the resultset</p>
+<p><strong>Phalcon_Model_Base</strong> <strong>offsetGet</strong> (int $index)</p>
+<p>Gets row in a specific position of the resultset</p>
+<p><strong>offsetSet</strong> (int $index, Phalcon_Model_Base $value)</p>
+<p>Resulsets cannot be changed. It has only been implemented to meet the definition of the ArrayAccess interface</p>
+<p><strong>offsetUnset</strong> (int $offset)</p>
+<p>Resulsets cannot be changed. It has only been implemented to meet the definition of the ArrayAccess interface</p>
+<p><strong>Phalcon_Model_Base</strong> <strong>getFirst</strong> ()</p>
+<p>Get first row in the resultset</p>
+<p><strong>Phalcon_Model_Base</strong> <strong>getLast</strong> ()</p>
+<p>Get last row in the resultset</p>
+<p><strong>boolean</strong> <strong>isFresh</strong> ()</p>
+<p>Tell if the resultset if fresh or an old cached</p>
+<p><strong>string</strong> <strong>serialize</strong> ()</p>
+<p>Serializing a resultset will dump all related rows into a big array</p>
+<p><strong>unserialize</strong> (string $data)</p>
+<p>Unserializing a resultset will allow to only works on the rows present in the saved state</p>
+<p><strong>Phalcon_Cache_Backend</strong> <strong>getCache</strong> ()</p>
+<p>Returns the associated cache for the resultset</p>
+<p><strong>Phalcon_Model_Base</strong> <strong>getSourceModel</strong> ()</p>
+<p>Returns an instance of the model that is used to generate each of the results</p>
+</div>
+</div>
+
+
+                    </div>
+                  </div>
+                </div>          
+            </div>
+          </td>  
+        </tr>   
+      </table>
+    <div class="related">      
+      <ul>
+        <li class="right" >
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="Phalcon_Model_Row.html" title="Class Phalcon_Model_Row"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="Phalcon_Model_Query.html" title="Class Phalcon_Model_Query"
+             >previous</a> |</li>
+          <li><a href="index.html" >API Index</a> &raquo;</li> 
+      </ul>
+    </div>
+        <div id="footer">
+             &copy; Copyright 2012, Phalcon Team.
+             Last updated on Aug 30, 2012.
+            Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+        </div>
+
+    </div>
+
+  </body>
+</html>

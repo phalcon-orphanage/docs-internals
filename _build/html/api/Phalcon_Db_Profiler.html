@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Class Phalcon_Db_Profiler &mdash; Phalcon 0.4.4 documentation</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/configurationblock.css" type="text/css" />
+    <!--
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/layout.css" type="text/css" />
+    -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Rosario" type="text/css">
+    <!-- link rel="stylesheet" href="http://phalconphp.com/css/s.css" type="text/css" -->
+    <link rel="stylesheet" href="../_static/s.css" type="text/css">    
+    <link rel="stylesheet" href="../_static/docs.css" type="text/css">
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.4.4',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+
+    <!--<script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/configurationblock.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/configurationblock.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/configurationblock.js"></script>-->
+
+    <script type="text/javascript">
+    <!--
+        $(document).ready(function() {
+            $("#versions").change(function() {
+                var docsUrl = $(this).val();
+                window.location.href = docsUrl;
+            });
+        });
+    -->
+    </script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="Phalcon 0.4.4 documentation" href="../index.html" />
+    <link rel="up" title="API Index" href="index.html" />
+    <link rel="next" title="Class Phalcon_Db_RawValue" href="Phalcon_Db_RawValue.html" />
+    <link rel="prev" title="Class Phalcon_Db_Profiler_Item" href="Phalcon_Db_Profiler_Item.html" /> 
+  </head>
+  <body>
+    <div id="wrapper">
+
+      <div id="header">        
+        <h1><a href="http://phalconphp.com/index" ><img border="0" src="../_static/img/logo-small.png"></a></h1>
+        <div align="center">
+          <div id="nav-main" role="navigation">
+            <div class="menubar">
+              <div class="nav-main-features nav-first"><a href="http://phalconphp.com/index" >HOME</a></div>
+              <div class="nav-main-features nav-first"><a href="http://phalconphp.com/download" >DOWNLOAD</a></div>
+              <div class="nav-main-features"><a href="http://docs.phalconphp.com" >DOCUMENTATION</a></div>
+              <div class="nav-main-features"><a href="https://groups.google.com/forum/#!forum/phalcon">SUPPORT</a></div>
+              <div class="nav-main-features nav-first"><a href="https://github.com/phalcon/cphalcon">GITHUB</a></div>
+              <div class="nav-main-features"><a target="blog" href="http://blog.phalconphp.com/">BLOG</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="related">      
+      <ul>
+        <li class="right" >
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="Phalcon_Db_RawValue.html" title="Class Phalcon_Db_RawValue"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="Phalcon_Db_Profiler_Item.html" title="Class Phalcon_Db_Profiler_Item"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://www.phalconphp.com">Home</a> &raquo;</li>
+        <li><a href="../index.html">Phalcon 0.4.4 documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">API Index</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+      <table width="90%" align="center">
+        <tr>
+      <td class="primary-box" width="25%" valign="top">
+            
+            <div id="searchbox" style="">
+              <h3>Search</h3>
+                <form class="search" action="http://readthedocs.org/search/project/" method="get">
+                  <input type="text" name="q" size="18">
+                  <input type="submit" value="Go">
+                  <input type="hidden" name="selected_facets" value="project:">
+                </form>
+            </div>
+            <h3><a href="../index.html">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference internal" href="#">Class <strong>Phalcon_Db_Profiler</strong></a><ul>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+</ul>
+</li>
+</ul>
+
+            <h4>Previous topic</h4>
+            <p class="topless"><a href="Phalcon_Db_Profiler_Item.html"
+                                  title="previous chapter">Class <strong>Phalcon_Db_Profiler_Item</strong></a></p>
+            <h4>Next topic</h4>
+            <p class="topless"><a href="Phalcon_Db_RawValue.html"
+                                  title="next chapter">Class <strong>Phalcon_Db_RawValue</strong></a></p>
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="../_sources/api/Phalcon_Db_Profiler.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+        </td>
+          <td class="second-box" valign="top">  
+            <div class="document">
+                <div class="documentwrapper">
+                  <div class="bodywrapper">
+                <div class="body" >
+                      
+  <div class="section" id="class-phalcon-db-profiler">
+<h1>Class <strong>Phalcon_Db_Profiler</strong><a class="headerlink" href="#class-phalcon-db-profiler" title="Permalink to this headline">¶</a></h1>
+<p>Instances of Phalcon_Db can generate execution profiles on SQL statements sent to the relational database. Profiled  information includes execution time in miliseconds. This aids in identifying bottlenecks in an applications.</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="cp">&lt;?php</span>
+
+<span class="nv">$profiler</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Phalcon_Db_Profiler</span><span class="p">();</span>
+
+<span class="c1">// Set the connection profiler</span>
+<span class="nv">$connection</span><span class="o">-&gt;</span><span class="na">setProfiler</span><span class="p">(</span><span class="nv">$profiler</span><span class="p">);</span>
+
+<span class="nv">$sql</span> <span class="o">=</span> <span class="s2">&quot;SELECT buyer_name, quantity, product_name &quot;</span>
+     <span class="o">.</span> <span class="s2">&quot;FROM buyers &quot;</span>
+     <span class="o">.</span> <span class="s2">&quot;LEFT JOIN products ON buyers.pid = products.id&quot;</span><span class="p">;</span>
+
+<span class="c1">// Execute a SQL statement</span>
+<span class="nv">$connection</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="nv">$sql</span><span class="p">);</span>
+
+<span class="c1">// Get the last profile in the profiler</span>
+<span class="nv">$profile</span> <span class="o">=</span> <span class="nv">$profiler</span><span class="o">-&gt;</span><span class="na">getLastProfile</span><span class="p">();</span>
+
+<span class="k">echo</span> <span class="s2">&quot;SQL Statement: &quot;</span><span class="p">,</span> <span class="nv">$profile</span><span class="o">-&gt;</span><span class="na">getSQLStatement</span><span class="p">(),</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+<span class="k">echo</span> <span class="s2">&quot;Start Time: &quot;</span><span class="p">,</span> <span class="nv">$profile</span><span class="o">-&gt;</span><span class="na">getInitialTime</span><span class="p">(),</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+<span class="k">echo</span> <span class="s2">&quot;Final Time: &quot;</span><span class="p">,</span> <span class="nv">$profile</span><span class="o">-&gt;</span><span class="na">getFinalTime</span><span class="p">(),</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+<span class="k">echo</span> <span class="s2">&quot;Total Elapsed Time: &quot;</span><span class="p">,</span> <span class="nv">$profile</span><span class="o">-&gt;</span><span class="na">getTotalElapsedSeconds</span><span class="p">(),</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<p><strong>startProfile</strong> (string $sqlStatement)</p>
+<p>Starts the profile of a SQL sentence</p>
+<p><strong>stopProfile</strong> ()</p>
+<p>Stops the active profile</p>
+<p><strong>integer</strong> <strong>getNumberTotalStatements</strong> ()</p>
+<p>Returns the total number of SQL statements processed</p>
+<p><strong>double</strong> <strong>getTotalElapsedSeconds</strong> ()</p>
+<p>Returns the total time in seconds spent by the profiles</p>
+<p><strong>Phalcon_Db_Profiler_Item[]</strong> <strong>getProfiles</strong> ()</p>
+<p>Returns all the processed profiles</p>
+<p><strong>reset</strong> ()</p>
+<p>Resets the profiler, cleaning up all the profiles</p>
+<p><strong>Phalcon_Db_Profiler_Item</strong> <strong>getLastProfile</strong> ()</p>
+<p>Returns the last profile executed in the profiler</p>
+</div>
+</div>
+
+
+                    </div>
+                  </div>
+                </div>          
+            </div>
+          </td>  
+        </tr>   
+      </table>
+    <div class="related">      
+      <ul>
+        <li class="right" >
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="Phalcon_Db_RawValue.html" title="Class Phalcon_Db_RawValue"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="Phalcon_Db_Profiler_Item.html" title="Class Phalcon_Db_Profiler_Item"
+             >previous</a> |</li>
+          <li><a href="index.html" >API Index</a> &raquo;</li> 
+      </ul>
+    </div>
+        <div id="footer">
+             &copy; Copyright 2012, Phalcon Team.
+             Last updated on Aug 30, 2012.
+            Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+        </div>
+
+    </div>
+
+  </body>
+</html>
