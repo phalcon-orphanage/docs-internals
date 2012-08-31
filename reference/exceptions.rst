@@ -1,5 +1,5 @@
 Throwing Exceptions
--------------------
+===================
 When you throw an exception using the Phalcon API, the current flow of execution will be stopped, returning to the last PHP code block when a Phalcon method where called.
 
 There are two ways to throw exceptions, the first, when the exception object only receives a string as parameter:
@@ -10,11 +10,11 @@ There are two ways to throw exceptions, the first, when the exception object onl
 
 Or building the exception manually and then throwing it:
 
-.. code-block:: c	
-	
+.. code-block:: c
+
 	PHALCON_INIT_VAR(exception_message);
 	PHALCON_CONCAT_SVS(exception_message, "Unable to insert into ", table, " without data");
-			
+
 	PHALCON_INIT_VAR(exception);
 	object_init_ex(exception, phalcon_db_exception_ce);
 

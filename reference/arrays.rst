@@ -1,6 +1,9 @@
 Working with Arrays
--------------------
-Although the Zend API, and provides various functions for working with arrays, with Phalcon API we added other. Specifically helping to maintain the reference counting correctly:
+===================
+Although the Zend API, and provides various functions for working with arrays, with Phalcon API we added others. Specifically helping to maintain the reference counting correctly:
+
+One dimension Arrays
+^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: c
 
@@ -37,10 +40,11 @@ Mixing both string and number indexes:
 	add_assoc_stringl_ex(fruits, SL("my-index")+1, SL("another string"), 1);
 
 	//Updating an existing index $fruits[2] = "other value";
-	phalcon_array_update_long_string(&fruits, 2, SL("other value"), PH_SEPARATE TSRMLS_CC);	
+	phalcon_array_update_long_string(&fruits, 2, SL("other value"), PH_SEPARATE TSRMLS_CC);
 
 	//Removing an existing index unset($fruits[1]);
 	phalcon_array_unset_long(fruits, 1);
 
 	//Removing an existing index unset($fruits["my-index"]);
 	phalcon_array_unset_string(fruits, SL("my-index")+1);
+

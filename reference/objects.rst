@@ -1,23 +1,27 @@
-Object Instantiation
---------------------
+Objects Manipulation
+====================
+Phalcon is pure object oriented OO framework.
+
+Creation/Instantiation
+----------------------
 Instantiate objects of the framework classes is easy:
 
 .. code-block:: c
 
 	PHALCON_INIT_VAR(route);
 	object_init_ex(route, phalcon_mvc_router_route_ce);
-		
+
 	PHALCON_INIT_VAR(pattern);
 	ZVAL_STRING(pattern, "#^/([a-zA-Z0-9\\_]+)[/]{0,1}$#", 1);
 	PHALCON_CALL_METHOD_PARAMS_1_NORETURN(route, "__construct", pattern, PH_CHECK);
 
-The above code is the same as doing in PHP:	
+The above code is the same as doing in PHP:
 
 .. code-block:: php
 
 	$route = new Phalcon\Mvc\Router\Route("#^/([a-zA-Z0-9\\_]+)[/]{0,1}$#");
 
-Moreover, if the class is not Phalcon objects must then initialized as follows:	
+Moreover, if the class is not Phalcon objects must then initialized as follows:
 
 .. code-block:: php
 

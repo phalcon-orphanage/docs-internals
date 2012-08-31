@@ -40,7 +40,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'Phalcon'
+project = 'Phalcon Internals'
 copyright = '2012, Phalcon Team'
 
 # The version info for the project you're documenting, acts as replacement for
