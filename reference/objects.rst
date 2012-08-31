@@ -91,3 +91,22 @@ Reading/Writing dynamical properties:
 	// $user_language = $employee->$property
 	PHALCON_INIT_VAR(user_language);
 	phalcon_read_property_zval(&user_language, employee, property, PH_NOISY_CC);
+
+
+Reading/Writing static properties:
+
+.. code-block:: c
+
+	//Updating a static member with a string zval
+	PHALCON_INIT_VAR(greeting);
+	ZVAL_STRING(greeting, "hello world", 1);
+	phalcon_update_static_property(SL("phalcon\\some\\component"), SL("_someString"), greeting TSRMLS_CC);
+
+	//Updating a static member with a long zval
+	PHALCON_INIT_VAR(number);
+	ZVAL_LONG(number, 150);
+	phalcon_update_static_property(SL("phalcon\\some\\component"), SL("_someInteger"), number TSRMLS_CC);
+
+	//Reading a static member
+	PHALCON_OBSERVE_VAR(number);
+	phalcon_read_static_property(&number, SL("phalcon\\some\\component"), SL("_someInteger") TSRMLS_CC);
