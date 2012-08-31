@@ -23,9 +23,9 @@ The above code is the same as doing in PHP:
 
 	<?php $route = new Phalcon\Mvc\Router\Route("#^/([a-zA-Z0-9\\_]+)[/]{0,1}$#");
 
-Moreover, if the class is not Phalcon objects must then initialized as follows:
+Moreover, if is not a Phalcon class then objects must then initialized as follows:
 
-.. code-block:: php
+.. code-block:: c
 
 	zend_class_entry *reflection_ce;
 
@@ -39,6 +39,55 @@ Moreover, if the class is not Phalcon objects must then initialized as follows:
 	//Pass a class name as constructor's parameter
 	PHALCON_CALL_METHOD_PARAMS_1_NORETURN(reflection, "__construct", class_name, PH_CHECK);
 
-Reading Properties
-------------------
+Reading/Writing Properties
+--------------------------
+Writing scalar values:
 
+.. code-block:: c
+
+	//Create a stdClass object
+	PHALCON_INIT_VAR(employee);
+	object_init(employee);
+
+	// $employee->name = "Sonny"
+	phalcon_update_property_string(employee, SL("name"), "Sonny" TSRMLS_CC);
+
+	// $employee->age = 23
+	phalcon_update_property_long(employee, SL("age"), 23 TSRMLS_CC);
+
+	//Read the "name" property $name = $employee->name
+	PHALCON_INIT_VAR(name);
+	phalcon_read_property(&name, employee, SL("name"), PH_NOISY_CC);
+
+Assigning other zvals to properties:
+
+.. code-block:: c
+
+	PHALCON_INIT_VAR(language);
+	ZVAL_STRING(language, "English", 1);
+
+	PHALCON_INIT_VAR(employee);
+	object_init(employee);
+
+	// $employee->language = $language
+	phalcon_update_property_zval(employee, SL("language"), language TSRMLS_CC);
+
+Reading/Writing dynamical properties:
+
+.. code-block:: c
+
+	PHALCON_INIT_VAR(language);
+	ZVAL_STRING(language, "English", 1);
+
+	PHALCON_INIT_VAR(property);
+	ZVAL_STRING(property, "language", 1);
+
+	PHALCON_INIT_VAR(employee);
+	object_init(employee);
+
+	// $employee->$property = $language
+	phalcon_update_property_zval_zval(employee, property, language TSRMLS_CC);
+
+	// $user_language = $employee->$property
+	PHALCON_INIT_VAR(user_language);
+	phalcon_read_property_zval(&user_language, employee, property, PH_NOISY_CC);
