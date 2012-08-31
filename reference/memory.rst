@@ -2,7 +2,7 @@ Memory Management
 =================
 As you may know, the memory management in C is all manual. Within a PHP extension, all memory is managed by Zend Memory Manager, however the management remains manual.
 
-Manual memory management is a powerful tool that offers C. However as PHP developers we are not used to this sort of thing. We like to just leave this task to the languag without worrying about it.
+Manual memory management is a powerful tool that offers C. But, as PHP developers we are not used to this sort of thing. We like to just leave this task to the languag without worrying about it.
 
 Phalcon MM
 ----------
@@ -16,11 +16,13 @@ For example:
 
 		zval *greeting = NULL;
 
+		//Add a memory frame
 		PHALCON_MM_GROW();
 
-		PHALCON_INIT_VAR(gretting);
+		PHALCON_INIT_VAR(greeting);
 		ZVAL_STRING(greeting, "Hello!", 1);
 
+		//Release all the allocated memory
 		PHALCON_MM_RESTORE();
 	}
 

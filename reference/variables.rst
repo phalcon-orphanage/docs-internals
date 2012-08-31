@@ -12,7 +12,7 @@ Unlike PHP, each variable in C must be declared at the beginning of the function
 
 	//Initialize the variable and assign it a string value
 	PHALCON_INIT_VAR(some_number);
-	ZVAL_STRING(some_number, "one hundred");
+	ZVAL_STRING(some_number, "one hundred", 1);
 
 	//Reinitialize the variable and change its value to long
 	PHALCON_INIT_VAR(some_number);
@@ -47,7 +47,7 @@ Changing the value of any of the two variables will change both pointers because
 	zend_print_zval(a, 1); // -10
 	zend_print_zval(b, 1); // -10
 
-Now, imagine the following code PHP:
+Now, imagine the following PHP code:
 
 .. code-block:: php
 
@@ -98,7 +98,7 @@ it's pointing to that memory address.
     zval *b ---------^
 
 Now, $b is equal to $a, now both variables are pointing to the same memory address 0x1. The reference counting is now 2, because two variables
-are pointing to the same memory slot. As you can see PHP is saving memory. Although the variables have different names, they point to the same value in memory so that we are not unnecessarily doubling its value.
+are pointing to the same memory slot. As you can see PHP is saving memory, although the variables have different names, they're pointing to the same value in memory so that we are not unnecessarily doubling its value.
 
 .. code-block:: php
 
@@ -110,7 +110,7 @@ are pointing to the same memory slot. As you can see PHP is saving memory. Altho
                 +---------+----+  +---------+----+
     zval *b ----------------------------^
 
-We're changing the variable $b, to avoid changing the value of $a. PHP performs an internal process called "separation". In this process, PHP allocates memory for $b and reduces the reference count in $a to indicate that $b is not pointing anymore to $a.
+We are changing the variable $b, to avoid changing the value of $a, PHP performs an internal process called "separation". In this process, PHP allocates memory for $b and reduces the reference count in $a to indicate that $b is not pointing anymore to $a.
 
 Let's see how to write the above process using Zend API:
 
@@ -121,11 +121,11 @@ Let's see how to write the above process using Zend API:
     ALLOC_INIT_ZVAL(a);
     ZVAL_STRING(a, "hello", 1);
 
-    //b = a, so we increase the reference counting in a
+    //b = a, so we increase the reference counting in "a"
     b = a;
     Z_ADDREF_P(a);
 
-    //Changing the value of b
+    //Changing the value of b, b isn't pointing anymore to a so we decrease the reference counting
     Z_DELREF_P(b);
 
     ALLOC_INIT_ZVAL(b);

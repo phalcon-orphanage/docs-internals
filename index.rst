@@ -29,5 +29,6 @@ Table of Contents
    reference/methods
    reference/classes
    reference/exceptions
+   reference/compilation
    reference/license
 
