@@ -166,7 +166,7 @@ html_show_copyright = True
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'PhalconDocumentationdoc'
+htmlhelp_basename = 'PhalconInternalDocumentationdoc'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -185,7 +185,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'PhalconDocumentation.tex', 'Phalcon PHP Framework Documentation',
+  ('index', 'PhalconInternalDocumentation.tex', 'Phalcon PHP Framework Internal Documentation',
    'Phalcon Team', 'manual'),
 ]
 
@@ -215,7 +215,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'phalcondocumentation', 'Phalcon PHP Framework Internals Documentation',
+    ('index', 'phalconinternals', 'Phalcon PHP Framework Internals Documentation',
      ['Phalcon Team'], 1)
 ]
 
@@ -229,8 +229,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'PhalconDocumentation', 'Phalcon PHP Framework Internals Documentation',
-   'Phalcon Team', 'PhalconDocumentation', 'One line description of project.',
+  ('index', 'PhalconInternalsDocumentation', 'Phalcon PHP Framework Internals Documentation',
+   'Phalcon Team', 'PhalconInternalsDocumentation', 'One line description of project.',
    'Miscellaneous'),
 ]
 
