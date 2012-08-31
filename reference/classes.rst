@@ -46,17 +46,21 @@ Each class has its own file .c file, in the case of Phalcon\\Auth file would be 
 
 .. code-block:: c
 
+	//PHP_METHOD(class_name, method_name)
 	PHP_METHOD(Phalcon_Auth, __construct){
 
 		zval *adapter_name, *options = NULL;
 
+		//Start a memory frame
 		PHALCON_MM_GROW();
 
+		//Receive the method parameters
 		if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "zz", &adapter_name, &options) == FAILURE) {
 			PHALCON_MM_RESTORE();
 			RETURN_NULL();
 		}
 
+		//Release the memory used
 		PHALCON_MM_RESTORE();
 	}
 
