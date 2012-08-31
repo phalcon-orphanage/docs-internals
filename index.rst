@@ -2,7 +2,7 @@
 Welcome to Phalcon Internals
 ============================
 
-Phalcon is not a traditional framework, is written as an C extension for PHP to provide high performance. The purpose of this document is to explain how it is built internally. If you're interested in helping to improve Phalcon, or simply understand how it works, this is the information you need.
+Phalcon is not a traditional framework, it ss written as an C extension for PHP to provide high performance. The purpose of this document is to explain how it is built internally. If you're interested in helping to improve Phalcon, or simply understand how it works, this is the information you need.
 
 Other formats
 -------------
@@ -26,6 +26,8 @@ Table of Contents
    reference/arrays
    reference/functions
    reference/objects
+   reference/methods
+   reference/classes
    reference/exceptions
    reference/license
 
