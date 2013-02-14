@@ -1,10 +1,13 @@
 Classes
 =======
-As an object oriented framework, Phalcon is mostly composed of classes. The classes are organized into namespaces. The following are the steps to export a variable in the extension and also make it available for other classes inside the framework.
+As an object oriented framework, Phalcon is mostly composed of classes. The classes are organized into namespaces.
+The following are the steps to export a variable in the extension and also make it available for other classes
+inside the framework.
 
 Registering methods and its arguments
 -------------------------------------
-In the dev/php_phalcon.h register in the first part of the file the pointer to the zend class entry. Let's pretend we're adding a Phalcon\\Auth to the framework:
+In the dev/php_phalcon.h register in the first part of the file the pointer to the zend class entry. Let's pretend
+we're adding a Phalcon\\Auth to the framework:
 
 .. code-block:: c
 
@@ -18,7 +21,8 @@ Then, we can add the methods prototypes, it's neccesary to add all the methods t
 	PHP_METHOD(Phalcon_Auth, getIdentity);
 	PHP_METHOD(Phalcon_Auth, auth);
 
-Later in the same file add the information of the arguments of each method. For example, let's define the class constructor only takes two arguments and they're mandatory:
+Later in the same file add the information of the arguments of each method. For example, let's define the class
+constructor only takes two arguments and they're mandatory:
 
 .. code-block:: c
 
@@ -64,7 +68,9 @@ Each class has its own file .c file, in the case of Phalcon\\Auth file would be 
 		PHALCON_MM_RESTORE();
 	}
 
-With the above code we create the constructor of the class Phalcon\\Auth, a method is defined with the macro PHP_METHOD, first we put the class name and then the name of the method, although Phalcon uses namespaces, class names have _ instead of \\:
+With the above code we create the constructor of the class Phalcon\\Auth, a method is defined with the macro
+PHP_METHOD, first we put the class name and then the name of the method, although Phalcon uses namespaces,
+class names have _ instead of \\:
 
 .. code-block:: c
 
@@ -79,7 +85,9 @@ If the method has parameters we receive them using zend_parse_parameters:
 		RETURN_NULL();
 	}
 
-If we do not receive the correct number of parameters will result in an error message. You see, there's an argument "zz" to receive the parameters, this indicates the type of data received and the number of them. In the above example that means that the method is receiving two parameters. If it were three zval then it should be "zzz".
+If we do not receive the correct number of parameters will result in an error message. You see, there's an argument
+"zz" to receive the parameters, this indicates the type of data received and the number of them. In the above example
+that means that the method is receiving two parameters. If they were three zval then it should be "zzz".
 
 Then the variables are received in respective order: &adapter_name, &options
 

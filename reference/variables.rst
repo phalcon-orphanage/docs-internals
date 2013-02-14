@@ -3,7 +3,9 @@ Variables
 
 Creation
 --------
-Unlike PHP, each variable in C must be declared at the beginning of the function in which we are working. Also, as noted above, all variables must be initialized before use. Even, it should be reset again when we change its value, for example:
+Unlike PHP, each variable in C must be declared at the beginning of the function in which we are working. Also,
+as noted above, all variables must be initialized before the use. Even, it should be reset again when we change its
+value, for example:
 
 .. code-block:: c
 
@@ -15,14 +17,16 @@ Unlike PHP, each variable in C must be declared at the beginning of the function
 	ZVAL_STRING(some_number, "one hundred", 1);
 
 	//Reinitialize the variable and change its value to long
-	PHALCON_INIT_VAR(some_number);
+	PHALCON_INIT_NVAR(some_number);
 	ZVAL_LONG(some_number, 100);
 
-When declaring the variables is important to initialize them to NULL. By doing this, PHALCON_INIT_VAR will know if the variable needs memory or it already have memory allocated.
+If a variable is assigned within a cycle or it's re-assigned is important to initialize it to NULL in its declaration.
+By doing this, PHALCON_INIT_NVAR will know if the variable needs memory or it already have memory allocated.
 
 Copy-on-Write
 -------------
-All the zval variables that we use in Phalcon are pointers. Each pointer points to its value in memory. Two pointers may eventually point to the same value in memory:
+All the zval variables that we use in Phalcon are pointers. Each pointer points to its value in memory. Two pointers
+may eventually point to the same value in memory:
 
 .. code-block:: c
 
@@ -147,4 +151,4 @@ With Phalcon API we should not worry about this:
     PHALCON_INIT_VAR(b);
     ZVAL_LONG(b, 18);
 
-Copying variables using PHALCON_CPY_WRT, we leave the task to Phalcon API of caring about the reference counting without worrying us about it.
+Copying variables using PHALCON_CPY_WRT, we leave the task to Phalcon API of caring about the reference counting without worrying us about that.

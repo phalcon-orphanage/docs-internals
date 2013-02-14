@@ -1,6 +1,7 @@
 Operations between Variables
 ============================
-PHP is a dynamic language, we can do almost any operation between two variables, regardless of type. Sometimes we do not know exactly the type of data that have the variables, using the Zend API we can do operations between them seamlessly:
+PHP is a dynamic language, we can do almost any operation between two variables, regardless of type. Sometimes we do
+not know exactly the type of data that have the variables, using the Zend API we can do operations between them seamlessly:
 
 .. code-block:: c
 
@@ -18,7 +19,8 @@ PHP is a dynamic language, we can do almost any operation between two variables,
 
 Concatenation
 -------------
-Concatenation is one of the most common operations we do in PHP. However using the Zend API can be tedious when concatenate many values​​, for example:
+Concatenation is one of the most common operations we do in PHP. However, using the Zend API can be tedious when
+oncatenating many values​​, for example:
 
 .. code-block:: c
 

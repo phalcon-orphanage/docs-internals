@@ -1,11 +1,16 @@
 Common Structures
 -----------------
 
-To start explaining Phalcon, is neccesary to understand a couple of low level structures that are commonly used in the framework:
+To start explaining Phalcon, is necessary to understand a couple of low-level structures that are commonly used in
+the framework:
 
 Zvals
 ^^^^^
-Most variables used in the framework are Zvals. Each value within a PHP application is a zval. The Zvals are polymorphic structures, ie a zval can have any value (string, long, double, array, etc.). Inspecting some code you will see that most variables are declared Zvals. PHP has scalar data types (string, null, bool, long and double) and non-scalar data types (arrays and objects). There is a way to assign a value the zval according to the data type:
+Most variables used in the framework are Zvals. Each value within a PHP application is a zval. The
+Zvals are polymorphic structures, i.e. a zval can have any value (string, long, double, array, etc.).
+Inspecting some code you will see that most variables are declared Zvals. PHP has scalar data types
+(string, null, bool, long and double) and non-scalar data types (arrays and objects). There is a way
+to assign a value the zval according to the data type:
 
 .. code-block:: c
 
@@ -47,7 +52,8 @@ This is the internal structure of a zval:
 		zend_uchar is_ref__gc;
 	};
 
-Most of the time you will not have to deal directly accessing the internal structure of a zval. Instead the Zend API offers a comfortable syntax for altering its value or get information from it.
+Most of the time you will not have to deal directly accessing the internal structure of a zval. Instead, the Zend API
+offers a comfortable syntax for altering its value or get information from it.
 
 Previously we saw how to change their values ​​change according to the type, let's see how to read their values​​:
 
@@ -70,8 +76,8 @@ If we want to know the data type of a zval:
 
 Zend Class Entries
 ^^^^^^^^^^^^^^^^^^
-Another common structure we used is the zend class entry. Every class in the C internal world has its own zend class entry.
-That structure help us to describe a class, its name, method, default properties, etc.
+Another common structure we used is the zend class entry. Every class in the C internal world has its own
+zend class entry. That structure help us describe a class, its name, method, default properties, etc.
 
 .. code-block:: c
 

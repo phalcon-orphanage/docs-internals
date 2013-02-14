@@ -1,6 +1,7 @@
 Objects Manipulation
 ====================
-Phalcon is a pure object oriented OO framework for PHP. In this chapter, we explain how to make most common operations on objects using the Phalcon API.
+Phalcon is a pure object-oriented framework for PHP. In this chapter, we explain how to make most common operations
+on objects using the Phalcon API.
 
 Creation/Instantiation
 ----------------------
@@ -15,7 +16,7 @@ Instantiate objects of the framework classes is easy:
 	//Calling the constructor and passing a pattern as parameter
 	PHALCON_INIT_VAR(pattern);
 	ZVAL_STRING(pattern, "#^/([a-zA-Z0-9\\_]+)[/]{0,1}$#", 1);
-	PHALCON_CALL_METHOD_PARAMS_1_NORETURN(route, "__construct", pattern, PH_CHECK);
+	PHALCON_CALL_METHOD_PARAMS_1_NORETURN(route, "__construct", pattern);
 
 The above code is the same as doing in PHP:
 
@@ -37,7 +38,7 @@ Moreover, if is not a Phalcon class then objects must then initialized as follow
 	object_init_ex(reflection, reflection_ce);
 
 	//Pass a class name as constructor's parameter
-	PHALCON_CALL_METHOD_PARAMS_1_NORETURN(reflection, "__construct", class_name, PH_CHECK);
+	PHALCON_CALL_METHOD_PARAMS_1_NORETURN(reflection, "__construct", class_name);
 
 Reading/Writing Properties
 --------------------------

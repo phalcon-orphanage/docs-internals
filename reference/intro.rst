@@ -1,11 +1,13 @@
 General Considerations
 ======================
-Phalcon is a C extension for PHP developers. The way in which Phalcon is written is not the usual, if you compare the code of Phalcon with other C extensions you'll see a huge difference, this unusual way of write the extension has several objectives:
+Phalcon is a C extension for PHP developers. The way in which Phalcon is written is not the usual, if you compare
+the code of Phalcon with other C extensions you will see a considerable difference, this unusual way of write
+the extension has several objectives:
 
 * Provide a code that is closer to be understood by developers PHP
 * Create objects and components that act as close as possible to PHP objects
 * Avoid dealing with low-level issues, whenever possible
-* Help to maintain a large base code like the Phalcon one
+* Help maintain a large base code like the Phalcon one
 
 When writing code for Phalcon try to follow these guidelines:
 

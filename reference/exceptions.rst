@@ -1,6 +1,7 @@
 Throwing Exceptions
 ===================
-When you throw an exception using the Phalcon API, the current flow of execution will be stopped, returning to the last PHP code block when a Phalcon method where called.
+When you throw an exception using the Phalcon API, the current flow of execution will be stopped, returning
+to the last PHP code block when a Phalcon method where called.
 
 There are two ways to throw exceptions, the first, when the exception object only receives a string as parameter:
 

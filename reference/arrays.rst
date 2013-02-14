@@ -1,6 +1,7 @@
 Working with Arrays
 ===================
-Although the Zend API, and provides various functions for working with arrays, with Phalcon API we added others. Specifically helping to maintain the reference counting correctly:
+Although the Zend API provides several functions for working with arrays, the Phalcon API has added others.
+Specifically helping to maintain the reference counting correctly:
 
 One dimension Arrays
 ^^^^^^^^^^^^^^^^^^^^

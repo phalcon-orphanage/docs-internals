@@ -1,6 +1,9 @@
 Calling Methods
 ===============
-As seen when calling functions, in Phalcon the methods are called in the PHP userland. Thanks to this, a Phalcon user can generate a backtrace and know exactly which components are involved in a given task. Additionally, like everything else we've seen, the way to make calls is familiar to PHP developers.
+As seen when calling functions, in Phalcon the methods are called in the PHP userland. Thanks to this, a Phalcon
+user can generate a backtrace and know exactly which components are involved in a given task. They also
+allows users to replace Phalcon components by PHP classes of their own. Additionally,
+like everything else we've seen, the way to make calls is familiar to PHP developers.
 
 Instance methods
 ----------------
@@ -17,7 +20,7 @@ Instance methods
 	//Create a PDO instance passing the dsn to the constructor
 	PHALCON_INIT_VAR(pdo);
 	object_init_ex(pdo, pdo_class_entry);
-	PHALCON_CALL_METHOD_PARAMS_1_NORETURN(pdo, "__construct", dsn, PH_CHECK);
+	PHALCON_CALL_METHOD_PARAMS_1_NORETURN(pdo, "__construct", dsn);
 
 	//Create a SQL statement
 	PHALCON_INIT_VAR(sql_statement);
@@ -25,7 +28,7 @@ Instance methods
 
 	//Call the "exec" method in the pdo object passing the sql_statement
 	PHALCON_INIT_VAR(success);
-	PHALCON_CALL_METHOD_PARAMS_1(success, pdo, "exec", sql_statement, PH_NO_CHECK);
+	PHALCON_CALL_METHOD_PARAMS_1(success, pdo, "exec", sql_statement);
 
 Static methods
 --------------
