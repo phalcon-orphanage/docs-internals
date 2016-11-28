@@ -40,8 +40,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'Phalcon Internals'
-copyright = '2012, Phalcon Team'
+project = 'Phalcon'
+copyright = '2016, Phalcon Team and contributors'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -230,7 +230,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'PhalconInternalsDocumentation', 'Phalcon PHP Framework Internals Documentation',
-   'Phalcon Team', 'PhalconInternalsDocumentation', 'One line description of project.',
+   'Phalcon Team', 'PhalconInternalsDocumentation', 'Phalcon is a web framework delivered as a C extension providing high performance and lower resource consumption.',
    'Miscellaneous'),
 ]
 
